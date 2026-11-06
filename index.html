@@ -5,11 +5,14 @@
         <meta charset="utf8">
     </head>
     <body>
+        
         <h1>About Me</h1>
         <p>Third-year Software Engineering student building backend tools that small businesses can actually use. 
             I build REST APIs with Node.js, Express, and PostgreSQL — my Task & Expense API is deployed live — and configurable front-end templates, like a cafe landing page with a CONFIG-driven menu. 
             Services: REST API design and endpoints, small-business landing and order pages, and next: Telegram bots. I work in small, reviewed steps and ship a working version each time.
         </p>
+        <button type= "button" id="button1" onclick="changeText()">Press the button to dispense one of my superpowers</button>
+        <p id="output"></p>
         <h2>Skills:</h2>
         <ul>
             <li>JavaScript</li>
@@ -30,5 +33,17 @@
         <h2>Contact link:</h2>
         <p><a href="https://github.com/mtsogtbayar24-alt"> mtsogtbayar24-alt </a></p>
     </footer>
+    <script>
+        const superpowers = ['I build REST APIs with Node.js, Express and PostgreSQL', 
+        'My Task & Expense API is live on the internet right now', 
+        'I build CONFIG-driven cafe template for small business.', 
+        'Freelance backend devoloper live in Ulaanbaatar.',
+        'I build Telegram bot using tutorial.'];
+        
+        function changeText() {
+            const randomIndex = Math.floor(Math.random() * superpowers.length);
+        document.getElementById('output').textContent = superpowers[randomIndex];
+        }
+    </script>
     </body> 
 </html>
